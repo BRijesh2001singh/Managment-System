@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Grid, Box, Button } from '@mui/material';
 import styled from 'styled-components';
-import Students from "../assets/students.svg";
+import Students from "../assets/school-cover.avif";
 import { LightPurpleButton } from '../components/buttonStyles';
 
 const Homepage = () => {
@@ -10,7 +10,7 @@ const Homepage = () => {
         <StyledContainer>
             <Grid container spacing={0}>
                 <Grid item xs={12} md={6}>
-                    <img src={Students} alt="students" style={{ width: '100%' }} />
+                    <img src={Students} alt="students" style={{ width: '100%', height: "70%" }} />
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <StyledPaper elevation={3}>
@@ -22,26 +22,25 @@ const Homepage = () => {
                             System
                         </StyledTitle>
                         <StyledText>
-                            Streamline school management, class organization, and add students and faculty.
-                            Seamlessly track attendance, assess performance, and provide feedback.
-                            Access records, view marks, and communicate effortlessly.
+                            Optimize school administration, streamline class organization, and facilitate the addition of students and faculty. Efficiently monitor attendance, evaluate performance, and offer feedback. Easily access records, view grades, and enable seamless communication.
                         </StyledText>
                         <StyledBox>
                             <StyledLink to="/choose">
-                                <LightPurpleButton variant="contained" fullWidth>
+                                <LightPurpleButton variant="contained" fullWidth style={{ backgroundColor: " rgb(82, 199, 82)" }}>
                                     Login
                                 </LightPurpleButton>
                             </StyledLink>
-                            <StyledLink to="/chooseasguest">
+                            <StyledLink to="/chooseasguest" >
                                 <Button variant="outlined" fullWidth
-                                    sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
+                                    sx={{ mt: 2, mb: 3, color: "white", borderColor: "white" }}
+                                    style={{ backgroundColor: " rgb(82, 199, 82)" }}
                                 >
                                     Login as Guest
                                 </Button>
                             </StyledLink>
                             <StyledText>
                                 Don't have an account?{' '}
-                                <Link to="/Adminregister" style={{color:"#550080"}}>
+                                <Link to="/Adminregister" style={{ color: "blue" }}>
                                     Sign up
                                 </Link>
                             </StyledText>

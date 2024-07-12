@@ -22,7 +22,7 @@ import Grow from '@mui/material/Grow';
 import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
-import Popup from '../../../components/Popup';
+
 
 const ShowStudents = () => {
 
@@ -39,19 +39,16 @@ const ShowStudents = () => {
         console.log(error);
     }
 
-    const [showPopup, setShowPopup] = React.useState(false);
-    const [message, setMessage] = React.useState("");
 
     const deleteHandler = (deleteID, address) => {
         console.log(deleteID);
         console.log(address);
-        setMessage("Sorry the delete function has been disabled for now.")
-        setShowPopup(true)
 
-        // dispatch(deleteUser(deleteID, address))
-        //     .then(() => {
-        //         dispatch(getAllStudents(currentUser._id));
-        //     })
+
+        dispatch(deleteUser(deleteID, address))
+            .then(() => {
+                dispatch(getAllStudents(currentUser._id));
+            })
     }
 
     const studentColumns = [
@@ -206,7 +203,7 @@ const ShowStudents = () => {
                     }
                 </>
             }
-            <Popup message={message} setShowPopup={setShowPopup} showPopup={showPopup} />
+
         </>
     );
 };

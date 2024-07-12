@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Button, Grid, Box, Typography, Paper, Checkbox, FormControlLabel, TextField, CssBaseline, IconButton, InputAdornment, CircularProgress, Backdrop } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import bgpic from "../assets/designlogin.jpg"
+import bgpic from "../assets/loginbg.png"
 import { LightPurpleButton } from '../components/buttonStyles';
 import styled from 'styled-components';
 import { loginUser } from '../redux/userRelated/userHandle';
@@ -135,7 +135,7 @@ const LoginPage = ({ role }) => {
                             alignItems: 'center',
                         }}
                     >
-                        <Typography variant="h4" sx={{ mb: 2, color: "#2c2143" }}>
+                        <Typography variant="h4" sx={{ mb: 2, color: "#2c2143" }} >
                             {role} Login
                         </Typography>
                         <Typography variant="h7">
@@ -218,7 +218,7 @@ const LoginPage = ({ role }) => {
                                     control={<Checkbox value="remember" color="primary" />}
                                     label="Remember me"
                                 />
-                                <StyledLink href="#">
+                                <StyledLink href="#" style={{ Color: "blue" }}>
                                     Forgot password?
                                 </StyledLink>
                             </Grid>
@@ -227,7 +227,7 @@ const LoginPage = ({ role }) => {
                                 fullWidth
                                 variant="contained"
                                 sx={{ mt: 3 }}
-                            >
+                                style={{ backgroundColor: " rgb(82, 199, 82)" }}>
                                 {loader ?
                                     <CircularProgress size={24} color="inherit" />
                                     : "Login"}
@@ -236,7 +236,8 @@ const LoginPage = ({ role }) => {
                                 fullWidth
                                 onClick={guestModeHandler}
                                 variant="outlined"
-                                sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
+                                sx={{ mt: 2, mb: 3, color: "white", borderColor: "white" }}
+                                style={{ backgroundColor: " rgb(82, 199, 82)" }}
                             >
                                 Login as Guest
                             </Button>
@@ -265,8 +266,9 @@ const LoginPage = ({ role }) => {
                         backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-                        backgroundSize: 'cover',
+                        backgroundSize: 'contain',
                         backgroundPosition: 'center',
+
                     }}
                 />
             </Grid>
@@ -278,7 +280,7 @@ const LoginPage = ({ role }) => {
                 Please Wait
             </Backdrop>
             <Popup message={message} setShowPopup={setShowPopup} showPopup={showPopup} />
-        </ThemeProvider>
+        </ThemeProvider >
     );
 }
 

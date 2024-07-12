@@ -21,7 +21,7 @@ import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 import Popup from '../../../components/Popup';
 
 const ViewStudent = () => {
-    const [showTab, setShowTab] = useState(false);
+
 
     const navigate = useNavigate()
     const params = useParams()
@@ -54,8 +54,6 @@ const ViewStudent = () => {
 
     const [openStates, setOpenStates] = useState({});
 
-    const [showPopup, setShowPopup] = useState(false);
-    const [message, setMessage] = useState("");
 
     const handleOpen = (subId) => {
         setOpenStates((prevState) => ({
@@ -90,25 +88,24 @@ const ViewStudent = () => {
         }
     }, [userDetails]);
 
-    const submitHandler = (event) => {
-        event.preventDefault()
-        dispatch(updateUser(fields, studentID, address))
-            .then(() => {
-                dispatch(getUserDetails(studentID, address));
-            })
-            .catch((error) => {
-                console.error(error)
-            })
-    }
+    // const submitHandler = (event) => {
+    //     event.preventDefault()
+    //     dispatch(updateUser(fields, studentID, address))
+    //         .then(() => {
+    //             dispatch(getUserDetails(studentID, address));
+    //         })
+    //         .catch((error) => {
+    //             console.error(error)
+    //         })
+    // }
 
     const deleteHandler = () => {
-        setMessage("Sorry the delete function has been disabled for now.")
-        setShowPopup(true)
 
-        // dispatch(deleteUser(studentID, address))
-        //     .then(() => {
-        //         navigate(-1)
-        //     })
+
+        dispatch(deleteUser(studentID, address))
+            .then(() => {
+                navigate(-1)
+            })
     }
 
     const removeHandler = (id, deladdress) => {
@@ -429,7 +426,7 @@ const ViewStudent = () => {
                     </Box>
                 </>
             }
-            <Popup message={message} setShowPopup={setShowPopup} showPopup={showPopup} />
+
 
         </>
     )

@@ -85,8 +85,9 @@ const ChooseUser = ({ visitor }) => {
   return (
     <StyledContainer>
       <Container>
-        <Grid container spacing={2} justifyContent="center">
-          <Grid item xs={12} sm={6} md={4}>
+        <div className='chooseUser-Heading' style={{ fontSize: "50px", color: "white", fontWeight: "bolder" }}>Select Account</div>
+        <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }} >
+          <Grid item xs={12} sm={6} md={4} >
             <div onClick={() => navigateHandler("Admin")}>
               <StyledPaper elevation={3}>
                 <Box mb={2}>
@@ -99,7 +100,7 @@ const ChooseUser = ({ visitor }) => {
               </StyledPaper>
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4} style={{ margin: "5rem" }}>
             <StyledPaper elevation={3}>
               <div onClick={() => navigateHandler("Student")}>
                 <Box mb={2}>
@@ -112,7 +113,7 @@ const ChooseUser = ({ visitor }) => {
               </div>
             </StyledPaper>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4} >
             <StyledPaper elevation={3}>
               <div onClick={() => navigateHandler("Teacher")}>
                 <Box mb={2}>
@@ -125,7 +126,7 @@ const ChooseUser = ({ visitor }) => {
               </div>
             </StyledPaper>
           </Grid>
-        </Grid>
+        </div>
       </Container>
       <Backdrop
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
@@ -135,7 +136,7 @@ const ChooseUser = ({ visitor }) => {
         Please Wait
       </Backdrop>
       <Popup message={message} setShowPopup={setShowPopup} showPopup={showPopup} />
-    </StyledContainer>
+    </StyledContainer >
   );
 };
 
