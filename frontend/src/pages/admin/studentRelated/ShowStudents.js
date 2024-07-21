@@ -189,7 +189,7 @@ const ShowStudents = () => {
                 <>
                     {response ?
                         <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
-                            <GreenButton variant="contained" onClick={() => navigate("/Admin/addstudents")}>
+                            <GreenButton variant="contained" onClick={() => navigate("/Admin/addstudents")} style={{ backgroundColor: "rgb(43, 73,148 )" }}>
                                 Add Students
                             </GreenButton>
                         </Box>

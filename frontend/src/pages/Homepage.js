@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Grid, Box, Button } from '@mui/material';
+import { Container, Grid, Box } from '@mui/material';
 import styled from 'styled-components';
 import Students from "../assets/school-cover.avif";
 import { LightPurpleButton } from '../components/buttonStyles';
@@ -15,8 +15,6 @@ const Homepage = () => {
                 <Grid item xs={12} md={6}>
                     <StyledPaper elevation={3}>
                         <StyledTitle>
-                            Welcome to
-                            <br />
                             School Management
                             <br />
                             System
@@ -26,18 +24,11 @@ const Homepage = () => {
                         </StyledText>
                         <StyledBox>
                             <StyledLink to="/choose">
-                                <LightPurpleButton variant="contained" fullWidth style={{ backgroundColor: " rgb(82, 199, 82)" }}>
+                                <LightPurpleButton variant="contained" fullWidth style={{ backgroundColor: "rgb(43, 73,148 )" }}>
                                     Login
                                 </LightPurpleButton>
                             </StyledLink>
-                            <StyledLink to="/chooseasguest" >
-                                <Button variant="outlined" fullWidth
-                                    sx={{ mt: 2, mb: 3, color: "white", borderColor: "white" }}
-                                    style={{ backgroundColor: " rgb(82, 199, 82)" }}
-                                >
-                                    Login as Guest
-                                </Button>
-                            </StyledLink>
+
                             <StyledText>
                                 Don't have an account?{' '}
                                 <Link to="/Adminregister" style={{ color: "blue" }}>

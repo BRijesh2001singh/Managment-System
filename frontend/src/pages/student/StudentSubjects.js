@@ -32,9 +32,8 @@ const StudentSubjects = () => {
             setSubjectMarks(userDetails.examResult || []);
         }
     }, [userDetails])
-
     useEffect(() => {
-        if (subjectMarks === []) {
+        if (subjectMarks === null) {
             dispatch(getSubjectList(currentUser.sclassName._id, "ClassSubjects"));
         }
     }, [subjectMarks, dispatch, currentUser.sclassName._id]);

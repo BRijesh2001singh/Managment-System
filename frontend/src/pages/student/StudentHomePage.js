@@ -46,18 +46,18 @@ const StudentHomePage = () => {
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper style={{ backgroundColor: "rgb(43, 73,148 )" }} >
                             <img src={Subject} alt="Subjects" />
-                            <Title>
+                            <Title style={{ color: "white" }}>
                                 Total Subjects
                             </Title>
                             <Data start={0} end={numberOfSubjects} duration={2.5} />
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper style={{ backgroundColor: "rgb(43, 73,148 )" }}>
                             <img src={Assignment} alt="Assignments" />
-                            <Title>
+                            <Title style={{ color: "white" }}>
                                 Total Assignments
                             </Title>
                             <Data start={0} end={15} duration={4} />
@@ -110,6 +110,7 @@ const ChartContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  color:Black
 `;
 
 const StyledPaper = styled(Paper)`
@@ -120,6 +121,7 @@ const StyledPaper = styled(Paper)`
   justify-content: space-between;
   align-items: center;
   text-align: center;
+   backgroundColor: rgb(43, 73,148 );
 `;
 
 const Title = styled.p`
@@ -128,7 +130,7 @@ const Title = styled.p`
 
 const Data = styled(CountUp)`
   font-size: calc(1.3rem + .6vw);
-  color: green;
+  color: white;
 `;
 
 

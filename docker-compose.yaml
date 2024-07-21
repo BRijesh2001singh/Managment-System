@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: brijesh1205/mongo:0.0.1
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    image: brijesh1205/schoolmanagmentsystem-backend:0.0.1
+    ports:
+      - "5000:5000"
+    environment:
+      MONGO_URI: ${MONGO_URI}
+    depends_on:
+      - mongo
+
+  frontend:
+    image: brijesh1205/schoolmanagmentsystem-frontend:0.0.1
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:

@@ -49,7 +49,6 @@ const ClassDetails = () => {
     const deleteHandler = (deleteID, address) => {
         console.log(deleteID);
         console.log(address);
-
         setShowPopup(true)
         dispatch(deleteUser(deleteID, address))
             .then(() => {

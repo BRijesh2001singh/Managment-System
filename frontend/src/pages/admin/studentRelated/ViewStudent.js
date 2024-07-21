@@ -427,7 +427,6 @@ const ViewStudent = () => {
                 </>
             }
 
-
         </>
     )
 }

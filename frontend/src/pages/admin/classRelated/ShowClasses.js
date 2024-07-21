@@ -144,9 +144,9 @@ const ShowClasses = () => {
         :
         <>
           {getresponse ?
-            <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
-              <GreenButton variant="contained" onClick={() => navigate("/Admin/addclass")}>
-                Add Class
+            <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '15%' }}>
+              <GreenButton variant="contained" onClick={() => navigate("/Admin/addclass")} style={{ backgroundColor: "rgb(43, 73,148 )", fontSize: "20px" }} >
+                + Add Class
               </GreenButton>
             </Box>
             :

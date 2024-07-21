@@ -15,25 +15,25 @@ const StudentSideBar = () => {
         <>
             <React.Fragment>
                 <ListItemButton component={Link} to="/">
-                    <ListItemIcon>
+                    <ListItemIcon title='Dashboard'>
                         <HomeIcon color={location.pathname === ("/" || "/Student/dashboard") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="Home" />
                 </ListItemButton>
                 <ListItemButton component={Link} to="/Student/subjects">
-                    <ListItemIcon>
+                    <ListItemIcon title='Subjects'>
                         <AssignmentIcon color={location.pathname.startsWith("/Student/subjects") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="Subjects" />
                 </ListItemButton>
                 <ListItemButton component={Link} to="/Student/attendance">
-                    <ListItemIcon>
+                    <ListItemIcon title='Attendance'>
                         <ClassOutlinedIcon color={location.pathname.startsWith("/Student/attendance") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="Attendance" />
                 </ListItemButton>
                 <ListItemButton component={Link} to="/Student/complain">
-                    <ListItemIcon>
+                    <ListItemIcon title='Complain'>
                         <AnnouncementOutlinedIcon color={location.pathname.startsWith("/Student/complain") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="Complain" />

@@ -3,7 +3,7 @@ import SeeNotice from '../../components/SeeNotice';
 import Students from "../../assets/img1.png";
 import Classes from "../../assets/img2.png";
 import Teachers from "../../assets/img3.png";
-import Fees from "../../assets/img4.png";
+import Fees from "../../assets/img4.jpg";
 import styled from 'styled-components';
 import CountUp from 'react-countup';
 import { useDispatch, useSelector } from 'react-redux';
@@ -38,7 +38,11 @@ const AdminHomePage = () => {
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={3} lg={3}>
                         <StyledPaper>
-                            <img src={Students} alt="Students" />
+                            <img src={Students} alt="Students" style={{
+
+                                width: "45%",
+
+                            }} />
                             <Title>
                                 Total Students
                             </Title>
@@ -47,7 +51,10 @@ const AdminHomePage = () => {
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
                         <StyledPaper>
-                            <img src={Classes} alt="Classes" />
+                            <img src={Classes} alt="Classes" style={{
+
+                                width: "45%"
+                            }} />
                             <Title>
                                 Total Classes
                             </Title>
@@ -56,7 +63,10 @@ const AdminHomePage = () => {
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
                         <StyledPaper>
-                            <img src={Teachers} alt="Teachers" />
+                            <img src={Teachers} alt="Teachers" style={{
+
+                                width: "45%"
+                            }} />
                             <Title>
                                 Total Teachers
                             </Title>
@@ -65,7 +75,10 @@ const AdminHomePage = () => {
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
                         <StyledPaper>
-                            <img src={Fees} alt="Fees" />
+                            <img src={Fees} alt="Fees" style={{
+
+                                width: "30%"
+                            }} />
                             <Title>
                                 Fees Collection
                             </Title>
@@ -91,6 +104,8 @@ const StyledPaper = styled(Paper)`
   justify-content: space-between;
   align-items: center;
   text-align: center;
+    background-color: rgb(43, 73,148 );
+    color:white
 `;
 
 const Title = styled.p`
@@ -99,7 +114,7 @@ const Title = styled.p`
 
 const Data = styled(CountUp)`
   font-size: calc(1.3rem + .6vw);
-  color: green;
+  color:white;
 `;
 
 export default AdminHomePage

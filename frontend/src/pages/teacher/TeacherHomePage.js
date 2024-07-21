@@ -32,8 +32,8 @@ const TeacherHomePage = () => {
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
-                            <img src={Students} alt="Students" />
+                        <StyledPaper style={{ backgroundColor: "rgb(43, 73,148 )" }}>
+                            <img src={Students} alt="Students" style={{ width: "25%" }} />
                             <Title>
                                 Class Students
                             </Title>
@@ -41,7 +41,7 @@ const TeacherHomePage = () => {
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper style={{ backgroundColor: "rgb(43, 73,148 )" }}>
                             <img src={Lessons} alt="Lessons" />
                             <Title>
                                 Total Lessons
@@ -50,7 +50,7 @@ const TeacherHomePage = () => {
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper style={{ backgroundColor: "rgb(43, 73,148 )" }}>
                             <img src={Tests} alt="Tests" />
                             <Title>
                                 Tests Taken
@@ -59,12 +59,12 @@ const TeacherHomePage = () => {
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
+                        <StyledPaper style={{ backgroundColor: "rgb(43, 73,148 )" }}>
                             <img src={Time} alt="Time" />
                             <Title>
                                 Total Hours
                             </Title>
-                            <Data start={0} end={30} duration={4} suffix="hrs"/>                        </StyledPaper>
+                            <Data start={0} end={30} duration={4} suffix="hrs" />                        </StyledPaper>
                     </Grid>
                     <Grid item xs={12}>
                         <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
@@ -85,15 +85,17 @@ const StyledPaper = styled(Paper)`
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  background-color:rgb(43, 73,148 )
 `;
 
 const Title = styled.p`
   font-size: 1.25rem;
+  color:white
 `;
 
 const Data = styled(CountUp)`
   font-size: calc(1.3rem + .6vw);
-  color: green;
+  color: white;
 `;
 
 export default TeacherHomePage

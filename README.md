@@ -33,9 +33,10 @@ Teacher can view students profile and can schedule attendance and also upload ma
 ![App Screenshot](./demo/s10.png)
 
 
+
 ## Run Locally
 
-Clone the project
+Clone the project 
 
 ```bash
   git clone git@github.com:BRijesh2001singh/Managment-System.git
@@ -45,7 +46,10 @@ Install dependencies
 ```bash
   npm install
 ```
-
+Docker 
+```bash
+docker-compose -f docker-compose.prod.yaml up
+```
 Start the frontend
 ```bash
 npm start
@@ -55,7 +59,11 @@ Start the server
   nodemon index.js
 ```
 
-
+## Docker
+Install docker-compose.yaml file to run locally
+```bash
+docker compose up
+``` 
 
 
 

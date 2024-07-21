@@ -35,7 +35,7 @@ const ShowTeachers = () => {
     } else if (response) {
         return (
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
-                <GreenButton variant="contained" onClick={() => navigate("/Admin/teachers/chooseclass")}>
+                <GreenButton variant="contained" onClick={() => navigate("/Admin/teachers/chooseclass")} style={{ backgroundColor: "rgb(43, 73,148 )" }}>
                     Add Teacher
                 </GreenButton>
             </Box>
