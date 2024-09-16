@@ -49,6 +49,7 @@ const LogoutMessage = styled.p`
   margin-bottom: 20px;
   font-size: 16px;
   text-align: center;
+  font-weight:bold;
 `;
 
 const LogoutButton = styled.button`
@@ -59,10 +60,9 @@ const LogoutButton = styled.button`
   font-size: 16px;
   color: #fff;
   cursor: pointer;
-
+font-weight:bold;
   &:hover {
-    color: #fff;
-    background-color: #333;
+    scale:1.2
   }
 `;
 
@@ -71,5 +71,5 @@ const LogoutButtonLogout = styled(LogoutButton)`
 `;
 
 const LogoutButtonCancel = styled(LogoutButton)`
-  background-color: rgb(99, 60, 99);
+  background-color:green;
 `;

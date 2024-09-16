@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Grid, Box } from '@mui/material';
 import styled from 'styled-components';
-import Students from "../assets/school-cover.avif";
+import Students from "../assets/school-cover.png";
 import { LightPurpleButton } from '../components/buttonStyles';
 
 const Homepage = () => {

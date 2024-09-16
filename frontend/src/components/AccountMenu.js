@@ -3,8 +3,9 @@ import { Box, Avatar, Menu, MenuItem, ListItemIcon, Divider, IconButton, Tooltip
 import { Settings, Logout } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
+import { useNavigate } from 'react-router-dom';
 const AccountMenu = () => {
+    const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = useState(null);
 
     const open = Boolean(anchorEl);
@@ -16,6 +17,7 @@ const AccountMenu = () => {
     };
     const handleClose = () => {
         setAnchorEl(null);
+
     };
     return (
         <>
@@ -59,7 +61,7 @@ const AccountMenu = () => {
                     <ListItemIcon>
                         <Settings fontSize="small" />
                     </ListItemIcon>
-                    Settings
+                    Home
                 </MenuItem>
                 <MenuItem>
                     <ListItemIcon>

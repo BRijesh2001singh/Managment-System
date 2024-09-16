@@ -127,6 +127,7 @@ const LoginPage = ({ role }) => {
                                         required
                                         fullWidth
                                         id="rollNumber"
+                                        placeholder='demo:21'
                                         label="Enter your Roll Number"
                                         name="rollNumber"
                                         autoComplete="off"
@@ -141,6 +142,7 @@ const LoginPage = ({ role }) => {
                                         required
                                         fullWidth
                                         id="studentName"
+                                        placeholder='demostudent'
                                         label="Enter your name"
                                         name="studentName"
                                         autoComplete="name"
@@ -148,6 +150,7 @@ const LoginPage = ({ role }) => {
                                         error={studentNameError}
                                         helperText={studentNameError && 'Name is required'}
                                         onChange={handleInputChange}
+
                                     />
                                 </>
                             ) : (
@@ -156,6 +159,7 @@ const LoginPage = ({ role }) => {
                                     required
                                     fullWidth
                                     id="email"
+                                    placeholder='demo@gmail.com'
                                     label="Enter your email"
                                     name="email"
                                     autoComplete="email"
@@ -170,11 +174,13 @@ const LoginPage = ({ role }) => {
                                 required
                                 fullWidth
                                 name="password"
+                                placeholder='demo456'
                                 label="Password"
                                 type={toggle ? 'text' : 'password'}
                                 id="password"
                                 autoComplete="current-password"
                                 error={passwordError}
+
                                 helperText={passwordError && 'Password is required'}
                                 onChange={handleInputChange}
                                 InputProps={{
@@ -196,9 +202,7 @@ const LoginPage = ({ role }) => {
                                     control={<Checkbox value="remember" color="primary" />}
                                     label="Remember me"
                                 />
-                                <StyledLink href="#" style={{ Color: "blue" }}>
-                                    Forgot password?
-                                </StyledLink>
+
                             </Grid>
                             <LightPurpleButton
                                 type="submit"
