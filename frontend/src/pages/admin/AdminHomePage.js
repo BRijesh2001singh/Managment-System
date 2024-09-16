@@ -46,7 +46,7 @@ const AdminHomePage = () => {
                             <Title>
                                 Total Students
                             </Title>
-                            <Data start={0} end={numberOfStudents} duration={2.5} />
+                            <Data style={{ color: "black" }} start={0} end={numberOfStudents} duration={2.5} />
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
@@ -58,7 +58,7 @@ const AdminHomePage = () => {
                             <Title>
                                 Total Classes
                             </Title>
-                            <Data start={0} end={numberOfClasses} duration={5} />
+                            <Data style={{ color: "black" }} start={0} end={numberOfClasses} duration={5} />
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
@@ -70,7 +70,7 @@ const AdminHomePage = () => {
                             <Title>
                                 Total Teachers
                             </Title>
-                            <Data start={0} end={numberOfTeachers} duration={2.5} />
+                            <Data style={{ color: "black" }} start={0} end={numberOfTeachers} duration={2.5} />
                         </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
@@ -82,7 +82,7 @@ const AdminHomePage = () => {
                             <Title>
                                 Fees Collection
                             </Title>
-                            <Data start={0} end={23000} duration={2.5} prefix="$" />                        </StyledPaper>
+                            <Data style={{ color: "black" }} start={0} end={23000} duration={2.5} prefix="$" />                        </StyledPaper>
                     </Grid>
                     <Grid item xs={12} md={12} lg={12}>
                         <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
