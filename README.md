@@ -1,5 +1,5 @@
 
-# Shool Management System
+# School Management System
 School Management System to make school operations smoother and more efficient. This app helps with administrative tasks and improves communication within the school. It includes features like role-based authentication, an admin dashboard, a teacher portal, a student dashboard, attendance management, grade tracking, and sections for notices and complaints.
 
 

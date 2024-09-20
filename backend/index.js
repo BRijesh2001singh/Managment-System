@@ -5,7 +5,7 @@ const dotenv = require("dotenv")
 const app = express()
 const Routes = require("./routes/route.js")
 
-const PORT = process.env.PORT || 8080
+const PORT = 8080 || process.env.PORT
 
 dotenv.config();
 app.use(express.json({ limit: '10mb' }))
@@ -15,10 +15,7 @@ app.use(cors({
 
 }))
 mongoose
-    .connect(process.env.MONGO_URL, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    })
+    .connect(process.env.MONGO_URL)
     .then(console.log("Connected to MongoDB"))
     .catch((err) => console.log("NOT CONNECTED TO NETWORK", err))
 
